@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🕉️ Bhagavad Gita - Divine Wisdom</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#ff6b35',
+                        'secondary': '#4ecdc4',
+                        'accent': '#ffd700',
+                        'bg-primary': '#0f0f23',
+                        'bg-secondary': '#1a1a2e',
+                        'bg-tertiary': '#16213e',
+                        'text-primary': '#ffffff',
+                        'text-secondary': '#cccccc',
+                        'text-muted': '#888888',
+                        'success': '#4caf50',
+                        'warning': '#ff9800',
+                        'error': '#f44336'
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        bounce: {
+                            '0%, 100%': { transform: 'translateY(-25%)', animationTimingFunction: 'cubic-bezier(0.8, 0, 1, 1)' },
+                            '50%': { transform: 'none', animationTimingFunction: 'cubic-bezier(0, 0, 0.2, 1)' },
+                        }
+                    },
+                    animation: {
+                        fadeIn: 'fadeIn 1s ease-out',
+                        bounce: 'bounce 1s infinite',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-bg-primary min-h-screen p-5 sm:p-10 font-sans">
+
+    <div id="main-container" class="max-w-6xl mx-auto space-y-5 animate-fadeIn">
+
+        <header id="header-frame" class="bg-bg-secondary p-4 rounded-xl text-center shadow-lg h-30 flex flex-col justify-center">
+            <h1 class="text-4xl sm:text-5xl font-extrabold text-accent mb-1">🕉️ BHAGAVAD GITA</h1>
+            <p class="text-secondary text-base sm:text-lg font-normal mb-2">✨ Discover the Eternal Wisdom of Lord Krishna ✨</p>
+            <div class="h-1 bg-primary w-3/4 mx-auto mt-2"></div>
+        </header>
+
+        <section id="input-card" class="bg-bg-secondary p-6 rounded-xl shadow-lg space-y-4">
+            <h2 class="text-xl sm:text-2xl font-bold text-text-primary text-center">📚 Enter Verse Reference</h2>
+            <p class="text-text-muted text-sm text-center">Format: chapter.verse (e.g., 2.47) • Chapters 1-18 available</p>
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                <input type="text" id="verse-entry" placeholder="Enter verse (e.g., 2.47)"
+                       class="w-full sm:w-64 h-12 text-xl text-center rounded-xl p-2 bg-bg-tertiary text-text-primary border-2 border-secondary focus:border-accent focus:ring-0 transition-all duration-300">
+                <button id="fetch-button"
+                        class="w-full sm:w-48 h-12 text-xl font-bold rounded-xl bg-primary hover:bg-success text-white transition-colors duration-300 border-2 border-accent shadow-md">
+                    🔍 FETCH VERSE
+                </button>
+            </div>
+        </section>
+
+        <section id="popular-card" class="bg-bg-secondary p-4 rounded-xl shadow-lg text-center">
+            <h3 class="text-xl sm:text-2xl font-bold text-accent mb-4">⭐ POPULAR VERSES</h3>
+            <div id="popular-buttons-container" class="flex flex-wrap justify-center gap-3">
+                </div>
+        </section>
+
+        <section id="results-container" class="space-y-4 h-full">
+            
+            <div id="reference-frame" class="bg-bg-tertiary p-4 rounded-xl shadow-md h-16 flex items-center justify-center">
+                <p id="reference-label" class="text-lg sm:text-xl font-bold text-accent text-center">
+                    Select a verse to begin your spiritual journey...
+                </p>
+            </div>
+
+            <div id="content-frame" class="grid grid-cols-1 md:grid-cols-2 gap-4 h-full">
+
+                <div id="left-column" class="bg-bg-secondary rounded-xl shadow-lg flex flex-col h-full overflow-hidden">
+                    <div class="bg-secondary h-12 flex items-center justify-center rounded-t-xl px-2">
+                        <h4 class="text-lg font-bold text-bg-primary">📜 संस्कृत (Sanskrit)</h4>
+                    </div>
+                    <div id="sanskrit-content-frame" class="flex-grow p-4 overflow-y-auto custom-scroll">
+                        <p id="sanskrit-text" class="text-text-primary text-2xl text-center leading-relaxed">
+                            </p>
+                    </div>
+                </div>
+
+                <div id="right-column" class="bg-bg-secondary rounded-xl shadow-lg flex flex-col h-full overflow-hidden">
+                    <div class="bg-primary h-12 flex items-center justify-center rounded-t-xl px-2">
+                        <h4 class="text-lg font-bold text-text-primary">🌟 English Translation</h4>
+                    </div>
+                    <div id="english-content-frame" class="flex-grow p-4 overflow-y-auto custom-scroll">
+                        <p id="english-text" class="text-text-secondary text-xl text-left leading-relaxed">
+                            </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <footer id="footer-frame" class="bg-bg-tertiary p-4 rounded-xl shadow-md h-12 flex items-center justify-center mt-5">
+            <p id="status-label" class="text-text-muted text-sm text-center">
+                🙏 Ready to explore the wisdom of the Gita...
+            </p>
+        </footer>
+
+        <div class="footer mt-10 text-gray-500 text-xs text-center animate-fadeIn">
+            <p class="mb-2">© 2025 <span class="inline-block animate-bounce">Hasya</span> | All Rights Reserved</p>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
