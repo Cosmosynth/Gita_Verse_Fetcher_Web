@@ -1,9 +1,7 @@
 // script.js
 
-// === API KEY CONFIGURATION ===
-// WARNING: Storing the API key here exposes it to anyone viewing the source code.
-// For production, use a backend server to securely proxy this request.
-const API_KEY = "c8df389391mshade9381c8a69b98p1def25jsne98b66085d6d"; // <-- PASTE YOUR ACTUAL KEY HERE!
+
+const API_KEY = "c8df389391mshade9381c8a69b98p1def25jsne98b66085d6d"; 
 
 // Color palette (expanded for use in classes)
 const colors = {
@@ -235,4 +233,5 @@ function initialize() {
 }
 
 // Run the initialization function when the page loads
+
 document.addEventListener('DOMContentLoaded', initialize);
